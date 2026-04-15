@@ -3,7 +3,7 @@ export default function Ex01() {
     <>
       <h1>Exercicio 01</h1>
       <div>
-        <button onClick={() => ()}>Click me</button>
+        <p>Este é o exercício 01</p>
       </div>
     </>
   );
