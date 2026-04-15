@@ -52,7 +52,7 @@ export default function Home() {
       {exercises.map((exercicio) => {
         return (
           <div className="flex flex-wrap gap-4 justify-center">
-            <div className="bg-gray-900 w-full sm:w-[10%] md:w-[8%] lg:w-[23%] h-24 mt-8 flex items-center  justify-center rounded-md border border-zinc-300 hover:bg-gray-700 transition-colors cursor-pointer">
+            <div className="w-2/5 h-12 border-2 mt-8 flex items-center  justify-center rounded-md border-zinc-300 hover:bg-gray-800 transition-colors cursor-pointer">
               <Link href={`exercicio-${exercicio.id}`} className="text-center">
                 <h1>{exercicio.title}</h1>
               </Link>
