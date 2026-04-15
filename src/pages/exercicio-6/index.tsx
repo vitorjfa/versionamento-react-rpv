@@ -1,0 +1,7 @@
+export default function Ex02() {
+  return (
+    <>
+      <h1>Exercicio 06</h1>
+    </>
+  );
+}

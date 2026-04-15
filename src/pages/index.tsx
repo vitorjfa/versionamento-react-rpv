@@ -5,53 +5,60 @@ const exercises = [
   {
     id: 1,
     title: "Theme Toggle",
-    description: "Estado + Estilização (dark/light mode)"
+    description: "Estado + Estilização (dark/light mode)",
   },
   {
     id: 2,
     title: "Counter com Histórico",
-    description: "Estado (useState + lista)"
+    description: "Estado (useState + lista)",
   },
   {
     id: 3,
     title: "Formulário de Login",
-    description: "Formulários + Validação básica"
+    description: "Formulários + Validação básica",
   },
   {
     id: 4,
     title: "Formulário de Cadastro",
-    description: "Formulários + Validação avançada"
+    description: "Formulários + Validação avançada",
   },
   {
     id: 5,
     title: "Lista de Usuários",
-    description: "Consumo de API (JSONPlaceholder)"
+    description: "Consumo de API (JSONPlaceholder)",
   },
   {
     id: 6,
     title: "Buscador com Filtro",
-    description: "Estado + API + Estilização"
+    description: "Estado + API + Estilização",
   },
   {
     id: 7,
     title: "Todo List",
-    description: "Estado completo (CRUD) + Estilização"
-  }
+    description: "Estado completo (CRUD) + Estilização",
+  },
 ];
 
 // Renderizar cada exercício como um card ( com link ) para a página na qual vocês irão desenvolver
-// Sugestão de card 
+// Sugestão de card
 // p-8 flex rounded-md border border-zinc-300
 
 export default function Home() {
-
   return (
     <>
-      {exercises.map(exercicio => {
-
-        return(
-          <Link href={'exercicio-1'}><p>{exercicio.title}</p></Link>
-        )
+      <h1 className="text-2xl flex items-center justify-center gap-2 mt-8">
+        Lista de Exercicios
+      </h1>
+      {exercises.map((exercicio) => {
+        return (
+          <div className="flex flex-wrap gap-4 justify-center">
+            <div className="bg-gray-900 w-full sm:w-[10%] md:w-[8%] lg:w-[23%] h-24 mt-8 flex items-center  justify-center rounded-md border border-zinc-300 hover:bg-gray-700 transition-colors cursor-pointer">
+              <Link href={`exercicio-${exercicio.id}`} className="text-center">
+                <h1>{exercicio.title}</h1>
+              </Link>
+            </div>
+          </div>
+        );
       })}
     </>
   );
