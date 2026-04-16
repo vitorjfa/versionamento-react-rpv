@@ -45,21 +45,23 @@ const exercises = [
 
 export default function Home() {
   return (
-    <>
-      <h1 className="text-2xl flex items-center justify-center gap-2 mt-8">
+    <><div className="bg-gray-950 w-full min-h-screen">
+      <h1 className="text-2xl flex items-center justify-center gap-2 pt-8 text-zinc-100">
         Lista de Exercicios
       </h1>
       {exercises.map((exercicio) => {
         return (
           <div className="flex flex-wrap gap-4 justify-center">
-            <div className="w-2/5 h-12 border-2 mt-8 flex items-center  justify-center rounded-md border-zinc-300 hover:bg-gray-800 transition-colors cursor-pointer">
+            <div className="w-2/5 h-12 border-2 mt-8 flex items-center  justify-center rounded-md bg-gray-900 border-zinc-300 hover:bg-gray-400 transition-colors cursor-pointer">
               <Link href={`exercicio-${exercicio.id}`} className="text-center">
                 <h1>{exercicio.title}</h1>
               </Link>
             </div>
           </div>
+          
         );
       })}
+      </div>
     </>
   );
 }

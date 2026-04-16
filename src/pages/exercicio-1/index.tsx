@@ -18,7 +18,6 @@ export default function Ex01() {
                 : "bg-gray-200 text-zinc-900 hover:bg-gray-700 hover:text-zinc-300"}`}
                 
                 onClick={() => setTema(!tema)}> {tema ? "Modo claro ☀️" : "Modo escuro 🌙"}</button>
-
             </div>
         </>
     )
